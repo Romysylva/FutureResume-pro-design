@@ -1,0 +1,76 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+
+body,html,.back{
+    background-color: $USV-black !important;
+    color: $USV-white !important;
+    position: relative;
+    z-index: -1;
+}
+.menu{
+//    @include gradient;
+    background-color: rgba( $white, $alpha: .1);
+    padding: -10px;
+    margin-bottom: -30px;
+    // height: 80px;
+    // height: fit-content;
+    li{
+        padding: 0 0.7rem;
+        a{
+            color: $primary-1;
+            text-transform: capitalize;
+            font-weight: 600;
+                
+           
+        }
+    }
+  
+}
+.navbar-brand{
+    
+    span{
+        color: $primary-1 !important;
+        margin-left: -2.29rem;
+        font-weight: 600;
+    }
+    
+
+    @include media-breakpoint-down(sm) {
+        img{
+            width: 120px;
+            margin-left: -30px;
+            margin-bottom: -25px;
+        }
+        span{
+            font-size: 0.9rem;
+            margin-left: -1.3rem;
+            display: none;
+        }
+
+      
+    }
+    img{
+        padding: -10px !important;
+    }
+} 
+button{
+    @include media-breakpoint-down (sm) {
+        .btn-rounded-1{
+            border: none !important;
+        }
+    }
+    span{
+        
+        // background-color: $primary-1 !important;
+        font-size: 35px;
+        font-weight: 900  !important;
+        
+    }
+
+}
+.navbar-dark-toggler-icon{
+    border: none !important;
+    margin-top: -10px !important;
+}
+

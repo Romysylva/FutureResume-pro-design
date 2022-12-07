@@ -1,0 +1,1165 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+/* ANINMATION SECTION */
+
+
+@keyframes bounce {
+    20%, 53%, 80%, from, to {
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+    transform: translate3d(0, 0, 0);
+}
+40%, 43% {
+    animation-timing-function: cubic-bezier(.755, .050, .855, .060);
+    transform: translate3d(0, -30px, 0);
+}
+70% {
+    animation-timing-function: cubic-bezier(.755, .050, .855, .060);
+    transform: translate3d(0, -15px, 0);
+}
+90% {
+    transform: translate3d(0, -4px, 0);
+}
+}.bounce {
+    animation-name: bounce;
+    transform-origin: center bottom;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+/* THE FLASH ANIMATION */
+@keyframes flash {
+    50%, from, to {
+    opacity: 1;
+}
+25%, 75% {
+    opacity: 0;
+}
+}.flash {
+    animation-name: flash;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+/* THE PULES ANIMATION */
+@keyframes pulse {
+    from, to {
+    transform: scale3d(1, 1, 1);
+}
+50% {
+    transform: scale3d(1.7, 1.7, 1.7);
+    -webkit-transform: scale3d(1.7, 1.7, 1.7);
+
+}
+}.pulse {
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+/* RUBERBAN ANIMATION */
+@keyframes rubberBand {
+    from, to {
+    transform: scale3d(1, 1, 1);
+}
+30% {
+    transform: scale3d(1.25, .75, 1);
+}
+40% {
+    transform: scale3d(.75, 1.25, 1);
+}
+50% {
+    transform: scale3d(1.15, .85, 1);
+}
+65% {
+    transform: scale3d(.95, 1.05, 1);
+}
+75% {
+    transform: scale3d(1.05, .95, 1);
+}
+}.rubberBand {
+    animation-name: rubberBand;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+/* SHAKE ANIMATION */
+@keyframes shake {
+    from, to {
+    transform: translate3d(0, 0, 0);
+}
+10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+    -webkit-transform: translate3d(-10px, 0, 0);
+    
+}
+20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+    -webkit-transform: translate3d(10px, 0, 0);
+    
+}
+}.shake {
+    animation-name: shake;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+/* THE HEEAD-SHAKE ANIMATION */
+@keyframes headShake {
+    0% {
+    transform: translateX(0);
+}
+6.5% {
+    transform: translateX(-6px) rotateY(-9deg);
+}
+18.5% {
+    transform: translateX(5px) rotateY(7deg);
+}
+31.5% {
+    transform: translateX(-3px) rotateY(-5deg);
+}
+43.5% {
+    transform: translateX(2px) rotateY(3deg);
+}
+50% {
+    transform: translateX(0);
+}
+}.headShake {
+    animation-timing-function: ease-in-out;
+    animation-name: headShake;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+/* THE SWING ANIMATION */
+@keyframes swing {
+    20% {
+    transform: rotate3d(0, 0, 1, 15deg);
+}
+40% {
+    transform: rotate3d(0, 0, 1, -10deg);
+}
+60% {
+    transform: rotate3d(0, 0, 1, 5deg);
+}
+80% {
+    transform: rotate3d(0, 0, 1, -5deg);
+}
+to {
+    transform: rotate3d(0, 0, 1, 0deg);
+}
+}.swing {
+    transform-origin: top center;
+    animation-name: swing;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+/* THE TADA ANIMATION */
+@keyframes tada {
+    from, to {
+    transform: scale3d(1, 1, 1);
+}
+10%, 20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+}
+30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+}
+40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+}
+}.tada {
+    animation-name: tada;
+    animation-iteration-count: infinite;
+    animation-duration: 3s
+}
+/* WOBBLE ANIMATION */
+@keyframes wobble {
+    from, to {
+    transform: none;
+}
+15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+}
+30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+}
+45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+}
+60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+}
+75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+}
+}.wobble {
+    animation-name: wobble;
+    animation-iteration-count: infinite;
+    animation-duration: 3s
+}
+/* THE JELLO ANIMATION */
+@keyframes jello {
+    11.1%, from, to {
+    transform: none;
+}
+22.2% {
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+}
+33.3% {
+    transform: skewX(6.25deg) skewY(6.25deg);
+}
+44.4% {
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+}
+55.5% {
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+}
+66.6% {
+    transform: skewX(-.78125deg) skewY(-.78125deg);
+}
+77.7% {
+    transform: skewX(.390625deg) skewY(.390625deg);
+}
+88.8% {
+    transform: skewX(-.1953125deg) skewY(-.1953125deg);
+}
+}.jello {
+    animation-name: jello;
+    transform-origin: center;
+    animation-iteration-count: infinite;
+    animation-duration: 3s
+}
+/* THE BOUNCEIN ANIMATION */
+@keyframes bounceIn {
+    20%, 40%, 60%, 80%, from, to {
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+}
+0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+}
+20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+40% {
+    transform: scale3d(.9, .9, .9);
+}
+60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+}
+80% {
+    transform: scale3d(.97, .97, .97);
+}
+to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+}
+}.bounceIn {
+    animation-name: bounceIn;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+    transition: 2s;
+    -webkit-transition: 2s;
+}
+/* THE BOUNCEIN DOWN */
+@keyframes bounceInDown {
+    60%, 75%, 90%, from, to {
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+}
+0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+}
+60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+}
+75% {
+    transform: translate3d(0, -10px, 0);
+}
+90% {
+    transform: translate3d(0, 5px, 0);
+}
+to {
+    transform: none;
+}
+}.bounceInDown {
+    animation-name: bounceInDown;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE bounceIn left */
+@keyframes bounceInLeft {
+    60%, 75%, 90%, from, to {
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+}
+0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0);
+}
+60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0);
+}
+75% {
+    transform: translate3d(-10px, 0, 0);
+}
+90% {
+    transform: translate3d(5px, 0, 0);
+}
+to {
+    transform: none;
+}
+}.bounceInLeft {
+    animation-name: bounceInLeft;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE bounceInRight ANIMATION */
+@keyframes bounceInRight {
+    60%, 75%, 90%, from, to {
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+}
+from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+}
+60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+}
+75% {
+    transform: translate3d(10px, 0, 0);
+}
+90% {
+    transform: translate3d(-5px, 0, 0);
+}
+to {
+    transform: none;
+}
+}.bounceInRight {
+    animation-name: bounceInRight;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE bounceInUP ANIMATION */
+@keyframes bounceInUp {
+    60%, 75%, 90%, from, to {
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+}
+from {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+}
+60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+}
+75% {
+    transform: translate3d(0, 10px, 0);
+}
+90% {
+    transform: translate3d(0, -5px, 0);
+}
+to {
+    transform: translate3d(0, 0, 0);
+}
+}.bounceInUp {
+    animation-name: bounceInUp;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE FADEIN ANIMATION */
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}.fadeIn {
+    animation-name: fadeIn;
+    animation-iteration-count: infinite;
+    animation-duration:  1s;
+}
+/* THE FADEIN DOWN ANIMATION */
+@keyframes fadeInDown {
+    from {
+    opacity: 0;
+    transform: translate3d(0, -200%, 0);
+    -webkit-transform: translate3d(0, -200%, 0);
+}
+to {
+    opacity: 1;
+    transform: none;
+}
+}.fadeInDown {
+    animation-name: fadeInDown;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE FADEIN LEFT */
+@keyframes fadeInLeft {
+    from {
+    opacity: 0;
+    transform: translate3d(-400%, 0, 0);
+    -webkit-transform: translate3d(-400%, 0, 0);
+    -moz-transform: translate3d(-400%, 0, 0);
+    -ms-transform: translate3d(-400%, 0, 0);
+    -o-transform: translate3d(-400%, 0, 0);
+}
+to {
+    opacity: 1;
+    transform: none;
+}
+}.fadeInLeft {
+    animation-name: fadeInLeft;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE FADEIN RIGHT ANIMATION */
+@keyframes fadeInRight {
+    from {
+    opacity: 0;
+    transform: translate3d(300%, 0, 0);
+    -webkit-transform: translate3d(300%, 0, 0);
+    -moz-transform: translate3d(300%, 0, 0);
+    -ms-transform: translate3d(300%, 0, 0);
+    -o-transform: translate3d(300%, 0, 0);
+}
+to {
+    opacity: 1;
+    transform: none;
+}
+}.fadeInRight {
+    animation-name: fadeInRight;
+    animation-iteration-count: infinite;
+    animation-duration:  2s;
+   animation-timeline: 5s;
+}
+/* THE FADEIN UP ANIMATION */
+@keyframes fadeInUp {
+    from {
+    opacity: 0;
+    transform: translate3d(0, 300%, 0);
+    -webkit-transform: translate3d(0, 300%, 0);
+
+}
+to {
+    opacity: 1;
+    transform: none;
+}
+}.fadeInUp {
+    animation-name: fadeInUp;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE LIGHTSPEEDIN ANIMATION */
+@keyframes lightSpeedIn {
+    from {
+    transform: translate3d(300%, 0, 0) skewX(-30deg);
+    opacity: 0;
+    -webkit-transform: translate3d(300%, 0, 0) skewX(-30deg);
+    
+}
+60% {
+    transform: skewX(20deg);
+    opacity: 1;
+    -webkit-transform: skewX(20deg);
+   
+}
+80% {
+    transform: skewX(-5deg);
+    opacity: 1;
+    -webkit-transform: skewX(-5deg);
+  
+}
+to {
+    transform: none;
+    opacity: 1;
+}
+}.lightSpeedIn {
+    animation-name: lightSpeedIn;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+ /* THE ROTATEIN ANIMATION */
+ @keyframes rotateIn {
+    from {
+    transform-origin: 400PX;
+    transform: rotate3d(0, 0, 1, -100deg);
+    opacity: 0;
+    -webkit-transform: rotate3d(0, 0, 1, -100deg);
+ 
+}
+to {
+    transform-origin: center;
+    transform: none;
+    opacity: 1;
+}
+}.rotateIn {
+    animation-name: rotateIn;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE ROTATEIN DOWN LEFT ANIMATION */
+@keyframes rotateInDownLeft {
+    from {
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+}
+to {
+    transform-origin: left bottom;
+    transform: none;
+    opacity: 1;
+}
+}.rotateInDownLeft {
+    animation-name: rotateInDownLeft;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE ROTATEIN DOWN RIGHT ANIMATION */
+@keyframes rotateInDownRight {
+    from {
+    transform-origin: right bottom;
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+}
+to {
+    transform-origin: right bottom;
+    transform: none;
+    opacity: 1;
+}
+}.rotateInDownRight {
+    animation-name: rotateInDownRight;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE ROTATE IN UP LEFT ANIMATION */
+@keyframes rotateInUpLeft {
+    from {
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+}
+to {
+    transform-origin: left bottom;
+    transform: none;
+    opacity: 1;
+}
+}.rotateInUpLeft {
+    animation-name: rotateInUpLeft;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE ROTATE UP RIGHT ANIMATION */
+@keyframes rotateInUpRight {
+    from {
+    transform-origin: right bottom;
+    transform: rotate3d(0, 0, 1, -90deg);
+    opacity: 0;
+}
+to {
+    transform-origin: right bottom;
+    transform: none;
+    opacity: 1;
+}
+}.rotateInUpRight {
+    animation-name: rotateInUpRight;
+    animation-iteration-count: 1;
+    animation-duration:  3s;
+}
+/* THE ROLLIN ANIMATION */
+@keyframes rollIn {
+    from {
+    opacity: 0;
+    transform: translate3d(-400%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    -webkit-transform: translate3d(-200%, 0, 0) rotate3d(0, 0, 1, -120deg);
+}
+to {
+    opacity: 1;
+    transform: none;
+}
+}.rollIn {
+    animation-name: rollIn;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+    
+}
+/* THE ZOOM  IN ANIMATION */
+@keyframes zoomIn {
+    from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+}
+50% {
+    opacity: 1;
+}
+}.zoomIn {
+    animation-name: zoomIn;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE ZOOMIN DOWN ANIMATION */
+@keyframes zoomInDown {
+    from {
+    opacity: 0;
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    animation-timing-function: cubic-bezier(.55, .055, .675, .19);
+}
+60% {
+    opacity: 1;
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(.175, .885, .32, 1);
+}
+}.zoomInDown {
+    animation-name: zoomInDown;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE ZOOM IN LEFT ANIMATION */
+@keyframes zoomInLeft {
+    from {
+    opacity: 0;
+    transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    animation-timing-function: cubic-bezier(.55, .055, .675, .19);
+}
+60% {
+    opacity: 1;
+    transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    animation-timing-function: cubic-bezier(.175, .885, .32, 1);
+}
+}.zoomInLeft {
+    animation-name: zoomInLeft;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE ZOOMIN RIGHT ANIMATION */
+@keyframes zoomInRight {
+    from {
+    opacity: 0;
+    transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
+    animation-timing-function: cubic-bezier(.55, .055, .675, .19);
+}
+60% {
+    opacity: 1;
+    transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
+    animation-timing-function: cubic-bezier(.175, .885, .32, 1);
+}
+}.zoomInRight {
+    animation-name: zoomInRight;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE ZOOMIN UP ANIMATION */
+@keyframes zoomInUp {
+    from {
+    opacity: 0;
+    transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+    animation-timing-function: cubic-bezier(.55, .055, .675, .19);
+}
+60% {
+    opacity: 1;
+    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(.175, .885, .32, 1);
+}
+}.zoomInUp {
+    animation-name: zoomInUp;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE SLIDEIN DOWN ANIMATION */
+@keyframes slideInDown {
+    from {
+    transform: translate3d(0, -200%, 0);
+    visibility: visible;
+    -webkit-transform: translate3d(0, -200%, 0);
+}
+to {
+    transform: translate3d(0, 0, 0);
+}
+}.slideInDown {
+    animation-name: slideInDown;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE SLINDE IN LEFT ANIMATION */
+@keyframes slideInLeft {
+    from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+}
+to {
+    transform: translate3d(0, 0, 0);
+}
+}.slideInLeft {
+    animation-name: slideInLeft;
+  animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE SLIDE IN RIGHT ANIMATION */
+@keyframes slideInRight {
+    from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+}
+to {
+    transform: translate3d(0, 0, 0);
+}
+}.slideInRight {
+    animation-name: slideInRight;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+/* THE SLIDE IN UP ANIMATION */
+@keyframes slideInUp {
+    from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+}
+to {
+    transform: translate3d(0, 0, 0);
+}
+}.slideInUp {
+    animation-name: slideInUp;
+    animation-iteration-count: infinite;
+    animation-duration:  3s;
+}
+.pro-ani-grow {
+    transition-duration: .3s;
+    transition-property: transform;
+}
+.pro-ani-grow:active, .pro-ani-grow:focus, .pro-ani-grow:hover {
+    transform: scale(1.1);
+}
+.pro-ani-shrink {
+    transition-duration: .3s;
+    transition-property: transform;
+}
+.pro-ani-shrink:active, .pro-ani-shrink:focus, .pro-ani-shrink:hover {
+    transform: scale(0.9);
+}
+@keyframes pro-ani-pulse {
+    25% {
+    transform: scale(1.1);
+}
+75% {
+    transform: scale(0.9);
+}
+}.pro-ani-pulse:active, .pro-ani-pulse:focus, .pro-ani-pulse:hover {
+    animation-name: pro-ani-pulse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes pro-ani-pulse-grow {
+    to {
+    transform: scale(1.1);
+}
+}.pro-ani-pulse-grow:active, .pro-ani-pulse-grow:focus, .pro-ani-pulse-grow:hover {
+    animation-name: pro-ani-pulse-grow;
+    animation-duration: .3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes pro-ani-pulse-shrink {
+    to {
+    transform: scale(0.9);
+}
+}.pro-ani-pulse-shrink:active, .pro-ani-pulse-shrink:focus, .pro-ani-pulse-shrink:hover {
+    animation-name: pro-ani-pulse-shrink;
+    animation-duration: .3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes pro-ani-push {
+    50% {
+    transform: scale(0.8);
+}
+100% {
+    transform: scale(1);
+}
+}.pro-ani-push:active, .pro-ani-push:focus, .pro-ani-push:hover {
+    animation-name: pro-ani-push;
+    animation-duration: .3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes pro-ani-pop {
+    50% {
+    transform: scale(1.2);
+}
+}.pro-ani-pop:active, .pro-ani-pop:focus, .pro-ani-pop:hover {
+    animation-name: pro-ani-pop;
+    animation-duration: .3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+.pro-ani-bounce-in {
+    transition-duration: .5s;
+}
+.pro-ani-bounce-in:active, .pro-ani-bounce-in:focus, .pro-ani-bounce-in:hover {
+    transform: scale(1.2);
+    transition-timing-function: cubic-bezier(0.47, 2.02, .31, -.36);
+}
+.pro-ani-bounce-out {
+    transition-duration: .5s;
+}
+.pro-ani-bounce-out:active, .pro-ani-bounce-out:focus, .pro-ani-bounce-out:hover {
+    transform: scale(0.8);
+    transition-timing-function: cubic-bezier(0.47, 2.02, .31, -.36);
+}
+.pro-ani-rotate {
+    transition-duration: .3s;
+    transition-property: transform;
+}
+.pro-ani-rotate:active, .pro-ani-rotate:focus, .pro-ani-rotate:hover {
+    transform: rotate(4deg);
+}
+.pro-ani-grow-rotate {
+    transition-duration: .3s;
+    transition-property: transform;
+}
+.pro-ani-grow-rotate:active, .pro-ani-grow-rotate:focus, .pro-ani-grow-rotate:hover {
+    transform: scale(1.1) rotate(4deg);
+}
+.pro-ani-float {
+    transition-duration: .3s;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+}
+.pro-ani-float:active, .pro-ani-float:focus, .pro-ani-float:hover {
+    transform: translateY(-8px);
+}
+.pro-ani-sink {
+    transition-duration: .3s;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+}
+.pro-ani-sink:active, .pro-ani-sink:focus, .pro-ani-sink:hover {
+    transform: translateY(8px);
+}
+@keyframes pro-ani-bob {
+    0% {
+        transform: translateY(-8px);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes pro-ani-bob-float {
+    0% {
+        transform: translateY(-8px);
+    }
+    100% {
+    transform: translateY(-32px );
+    -webkit-transform: translateY(-32px );
+}
+}
+.pro-ani-bob:active, .pro-ani-bob:focus, .pro-ani-bob:hover {
+    animation-name: pro-ani-bob-float, pro-ani-bob;
+    animation-duration: .3s, 1.5s;
+    animation-delay: 0s, .3s;
+    animation-timing-function: ease-out, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards;
+    animation-direction: normal, alternate;
+}
+.pro-ani-bob-float:active, .pro-ani-bob-float:focus, .pro-ani-bob-float:hover {
+    animation-name: pro-ani-bob-float;
+    animation-duration: .3s, 1.5s;
+    animation-delay: 0s, .3s;
+    animation-timing-function: ease-out, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards;
+    animation-direction: normal, alternate;
+}
+
+@keyframes pro-ani-hang {
+    0% {
+    transform: translateY(8px);
+}
+50% {
+    transform: translateY(4px);
+}
+100% {
+    transform: translateY(8px);
+}
+}@keyframes pro-ani-hang-sink {
+    100% {
+    transform: translateY(8px);
+}
+}.pro-ani-hang:active, .pro-ani-hang:focus, .pro-ani-hang:hover {
+    animation-name: pro-ani-hang-sink, pro-ani-hang;
+    animation-duration: .3s, 1.5s;
+    animation-delay: 0s, .3s;
+    animation-timing-function: ease-out, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards;
+    animation-direction: normal, alternate;
+}
+.pro-ani-skew {
+    transition-duration: .3s;
+    transition-property: transform;
+}
+.pro-ani-skew:active, .pro-ani-skew:focus, .pro-ani-skew:hover {
+    transform: skew(-10deg);
+}
+.pro-ani-skew-forward {
+    transition-duration: .3s;
+    transition-property: transform;
+    transform-origin: 0 100%}
+.pro-ani-skew-forward:active, .pro-ani-skew-forward:focus, .pro-ani-skew-forward:hover {
+    transform: skew(-10deg);
+}
+.pro-ani-skew-backward {
+    transition-duration: .3s;
+    transition-property: transform;
+    transform-origin: 0 100%}
+.pro-ani-skew-backward:active, .pro-ani-skew-backward:focus, .pro-ani-skew-backward:hover {
+    transform: skew(10deg);
+}
+/* wobble vertical animation */
+@keyframes pro-ani-wobble-vertical{
+
+33.3% {
+    transform: translateY(-6px);
+}
+49.95% {
+    transform: translateY(4px);
+}
+66.6% {
+    transform: translateY(-2px);
+}
+83.25% {
+    transform: translateY(1px);
+}
+100% {
+    transform: translateY(0);
+}
+}.pro-ani-wobble-vertical:active, .pro-ani-wobble-vertical:focus, .pro-ani-wobble-vertical:hover {
+    animation-name: pro-ani-wobble-vertical;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+/* wobble horizontal animation */
+@keyframes pro-ani-wobble-horizontal {
+    16.65% {
+    transform: translateX(8px);
+}
+33.3% {
+    transform: translateX(-6px);
+}
+49.95% {
+    transform: translateX(4px);
+}
+66.6% {
+    transform: translateX(-2px);
+}
+83.25% {
+    transform: translateX(1px);
+}
+100% {
+    transform: translateX(0);
+}
+}.pro-ani-wobble-horizontal:active, .pro-ani-wobble-horizontal:focus, .pro-ani-wobble-horizontal:hover {
+    animation-name: pro-ani-wobble-horizontal;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+/* wobble to .pro-ani-wobble-to-bottom-right */
+@keyframes pro-ani-wobble-to-bottom-right {
+    16.65% {
+    transform: translate(8px, 8px);
+}
+33.3% {
+    transform: translate(-6px, -6px);
+}
+49.95% {
+    transform: translate(4px, 4px);
+}
+66.6% {
+    transform: translate(-2px, -2px);
+}
+83.25% {
+    transform: translate(1px, 1px);
+}
+100% {
+    transform: translate(0, 0);
+}
+}.pro-ani-wobble-to-bottom-right:active, .pro-ani-wobble-to-bottom-right:focus, .pro-ani-wobble-to-bottom-right:hover {
+    animation-name: pro-ani-wobble-to-bottom-right;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+/* wobbel to .pro-ani-wobble-to-top-right */
+@keyframes pro-ani-wobble-to-top-right {
+    16.65% {
+    transform: translate(8px, -8px);
+}
+33.3% {
+    transform: translate(-6px, 6px);
+}
+49.95% {
+    transform: translate(4px, -4px);
+}
+66.6% {
+    transform: translate(-2px, 2px);
+}
+83.25% {
+    transform: translate(1px, -1px);
+}
+100% {
+    transform: translate(0, 0);
+}
+}.pro-ani-wobble-to-top-right:active, .pro-ani-wobble-to-top-right:focus, .pro-ani-wobble-to-top-right:hover {
+    animation-name: pro-ani-wobble-to-top-right;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+/* the pro-ani wobble top animation */
+@keyframes pro-ani-wobble-top {
+    16.65% {
+    transform: skew(-12deg);
+}
+33.3% {
+    transform: skew(10deg);
+}
+49.95% {
+    transform: skew(-6deg);
+}
+66.6% {
+    transform: skew(4deg);
+}
+83.25% {
+    transform: skew(-2deg);
+}
+100% {
+    transform: skew(0);
+}
+}
+.pro-ani-wobble-top {
+    transform-origin: 0 100%}
+.pro-ani-wobble-top:active, .pro-ani-wobble-top:focus, .pro-ani-wobble-top:hover {
+    animation-name: pro-ani-wobble-top;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+/* the wobble bottom animation */
+@keyframes pro-ani-wobble-bottom {
+    16.65% {
+    transform: skew(-12deg);
+}
+33.3% {
+    transform: skew(10deg);
+}
+49.95% {
+    transform: skew(-6deg);
+}
+66.6% {
+    transform: skew(4deg);
+}
+83.25% {
+    transform: skew(-2deg);
+}
+100% {
+    transform: skew(0);
+}
+}
+.pro-ani-wobble-bottom {
+    transform-origin: 100% 0;
+}
+.pro-ani-wobble-bottom:active, .pro-ani-wobble-bottom:focus, .pro-ani-wobble-bottom:hover {
+    animation-name: pro-ani-wobble-bottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+/* the .pro-ani-wobble-skew animation */
+@keyframes pro-ani-wobble-skew {
+    16.65% {
+    transform: skew(-12deg);
+}
+33.3% {
+    transform: skew(10deg);
+}
+49.95% {
+    transform: skew(-6deg);
+}
+66.6% {
+    transform: skew(4deg);
+}
+83.25% {
+    transform: skew(-2deg);
+}
+100% {
+    transform: skew(0);
+}
+}.pro-ani-wobble-skew:active, .pro-ani-wobble-skew:focus, .pro-ani-wobble-skew:hover {
+    animation-name: pro-ani-wobble-skew;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+} 
+/* the pro-ani-buzz animation */
+@keyframes pro-ani-buzz {
+    50% {
+    transform: translateX(3px) rotate(2deg);
+}
+100% {
+    transform: translateX(-3px) rotate(-2deg);
+}
+}.pro-ani-buzz:active, .pro-ani-buzz:focus, .pro-ani-buzz:hover {
+    animation-name: pro-ani-buzz;
+    animation-duration: .15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+/* the pro-ani buzzout animation */
+@keyframes pro-ani-buzz-out {
+    10% {
+    transform: translateX(3px) rotate(2deg);
+}
+20% {
+    transform: translateX(-3px) rotate(-2deg);
+}
+30% {
+    transform: translateX(3px) rotate(2deg);
+}
+40% {
+    transform: translateX(-3px) rotate(-2deg);
+}
+50% {
+    transform: translateX(2px) rotate(1deg);
+}
+60% {
+    transform: translateX(-2px) rotate(-1deg);
+}
+70% {
+    transform: translateX(2px) rotate(1deg);
+}
+80% {
+    transform: translateX(-2px) rotate(-1deg);
+}
+90% {
+    transform: translateX(1px) rotate(0);
+}
+100% {
+    transform: translateX(-1px) rotate(0);
+}
+}.pro-ani-buzz-out:active, .pro-ani-buzz-out:focus, .pro-ani-buzz-out:hover {
+    animation-name: pro-ani-buzz-out;
+    animation-duration: .75s;
+    animation-timing-function: linear ;
+    animation-iteration-count: 1 ;
+}

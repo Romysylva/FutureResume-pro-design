@@ -1,0 +1,15 @@
+// GRADIENT MIXINS
+
+@use '../custom' as*;
+
+@mixin gradient{
+    background: linear-gradient(to right, rgba($primary-1,0.95),rgba($primary,0.95));
+
+}
+@mixin btn-hover{
+    background: linear-gradient(to top, rgba($primary-1,0.95),rgba($primary-2,0.95));
+}
+@mixin carosel-background {
+    background: linear-gradient(to right, rgba($USV-black, .9),rgba($black, .9));
+    
+}

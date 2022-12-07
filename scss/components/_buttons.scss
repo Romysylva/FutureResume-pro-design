@@ -1,0 +1,103 @@
+@use '../custom' as*;
+@use '../components/mixins' as *;
+
+
+.btn-rounded{
+    position: relative;
+    padding: 0.7375rem 2.375rem 0.7375rem 2.375rem ;
+    font-weight: 700;
+    margin:0 ;
+    border: 0.1rem solid rgba($white,0.8);
+    background-color: $primary-1;
+    color: $white;
+    border-bottom: 1px solid $gray-600 !important;
+    // box-shadow: 1PX 3PX 2px $gray-300 !important;
+    transition: .5s;
+    box-shadow: 2px 0px 0px 1.1px rgba($gray-300, 0.8);
+
+    // span{
+    //     position: absolute;
+    //     background-color: $primary;
+    //     width: 2.5rem;
+    //     height: 2.5rem;
+    //     top: 50%;
+    //     right: 5px;
+    //     transform: translateY(50%);
+    //     -webkit-transform: translateY(-50%);
+    //     border-radius: 50%;
+
+    //     i{
+    //         color: $white;
+    //         font-size: 1rem;
+    //         line-height: 2.5rem;
+    //     }
+    // }
+    &:hover{
+        @include gradient;
+        color : $white;
+        transform: rotateX(30deg);
+        -webkit-transform: rotateX(30deg);
+        box-shadow: 0px 5px 0px rgba($gray-300 , 0.8);
+        span{
+            background-color: rgba($black, 0.7);
+        }
+    }
+}
+
+.btn-rounded-1{
+    position: relative;
+    padding: 0.7375rem 2.375rem 0.7375rem 2.375rem ;
+    font-weight: 700;
+    margin:0 ;
+    border: 0.1rem solid rgba($primary-1,0.8);
+    background-color: $USV-black;
+    color: $primary-1;
+    border-bottom: 1px solid $gray-600 !important;
+    // box-shadow: 1PX 3PX 2px $gray-300 !important;
+    transition: .5s;
+    box-shadow: 2px 0px 0px 1.1px rgba($gray-300, 0.8);
+    
+
+    
+    &:hover{
+        @include gradient;
+        color : $white;
+        transform: rotateX(30deg);
+        -webkit-transform: rotateX(30deg);
+        box-shadow: 0px 5px 0px rgba($gray-300 , 0.8);
+        span{
+            background-color: rgba($black, 0.7);
+          
+        }
+    }
+}
+
+.btn-rounded-3{
+    @include media-breakpoint-down (sm) {
+        padding: 0.7375rem 5.375rem 0.7375rem 5.375rem ;
+    }
+    position: relative;
+    padding: 0.7375rem 5.375rem 0.7375rem 5.375rem ;
+    font-weight: 700;
+    margin:0 ;
+    border: 0.1rem solid rgba($white,0.8);
+    background-color: $primary-1;
+    color: $white;
+    border: none;
+    border-bottom: 1px solid $gray-600 !important;
+    transition: .5s;
+    box-shadow: 2px 0px 0px 1.1px rgba($gray-300, 0.8);
+
+    
+
+    &:hover{
+        @include gradient;
+        color : $white;
+        transform: rotateX(30deg);
+        -webkit-transform: rotateX(30deg);
+        box-shadow: 0px 5px 0px rgba($gray-300 , 0.8);
+        span{
+            background-color: rgba($black, 0.7);
+        }
+    }
+}

@@ -1,0 +1,58 @@
+// IMPORT BOOTSTRAP 5
+
+
+$indigo:  #6610f2;
+$purple-dark:  #9926f0;
+$purple-light:  #8863f5;
+$pink:    #d122e3;
+$orange: #ff5c00;
+$project-black:    #000000;
+
+// WHITE AND GRAY COLORS
+
+$USV-white:    #fff;
+$USV-gray-100: #f8f9fa;
+$USV-gray-200: #e9ecef;
+$USV-gray-300: #dee2e6;
+$USV-gray-400: #ced4da;
+$USV-gray-500: #adb5bd;
+$USV-gray-600: #6c757d;
+$USV-gray-700: #495057;
+$USV-gray-800: #343a40;
+$USV-gray-900: #212529;
+$USV-black:    #000;
+
+// THEME COLORS
+
+$primary:       $purple-dark;
+$secondary:     $pink;
+$primary-1:     $orange;
+$primary-2:     $project-black;
+
+
+// ACCORDION COLOR OVERRIDE
+$accordion-icon-color:                    $primary;
+$accordion-icon-active-color:             $secondary;
+
+$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/> <path d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
+
+$accordion-icon-width:                    1.5rem ;
+
+// .navbar-toggler-icon
+
+
+
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$primary-1}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
+$navbar-dark-toggler-border-color: none;
+$navbar-toggler-focus-width:        none ;
+$navbar-dark-active-color:          $secondary;
+$navbar-dark-hover-color:           rgba($primary, .95) ;
+
+$carousel-indicator-opacity:         .1 ;
+$carousel-indicator-active-bg:       $USV-black ;
+$carousel-indicator-active-opacity:  1 ;
+$carousel-indicator-transition:      opacity .6s ease ;
+
+
+@import"../node_modules/bootstrap/scss/bootstrap.scss";

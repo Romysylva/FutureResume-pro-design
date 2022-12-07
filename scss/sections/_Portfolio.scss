@@ -1,0 +1,327 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+#portfolio{
+    @include media-breakpoint-down (sm) {
+     
+        h3{
+            font-size: 25px !important;
+        }
+        p{
+            font-size: 15px !important;
+        }
+        
+        position: relative;
+        top: 400px;
+    }
+    h3{
+        font-size: 40px;
+    }
+    p{
+        color: $primary-1;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .content-box-1{
+        @include media-breakpoint-down (sm) {
+            // margin-top: 50px !important;
+            // text-align: left;
+        }
+        .img-right{
+            @include media-breakpoint-down (sm) {
+                img{
+                    margin-top: 30px !important;
+                }
+            }
+          }
+        display: flex;
+        @include media-breakpoint-down (sm) {
+            flex-direction: row;
+        justify-content: space-between !important;
+            h4{
+                // margin-top: 10px;
+                font-size: 20px;
+            }
+          
+            p{
+                margin-right: -5px !important;
+                margin-left: -60px !important;
+                font-size: 13px !important;
+                padding: 50px;
+               
+            }
+        }
+        p{
+            color: rgba($color: #000000, $alpha: .6);
+            font-size: 15px;
+            padding: 0 100px 0 0px;
+            text-align: center !important;
+            line-height: 20px;
+            letter-spacing: 1px;
+            font-weight: 350;
+            text-align: left !important;
+        }
+    }
+    .text-righ{
+        @include media-breakpoint-down (sm) {
+
+            margin-left: 50px !important;
+            p{
+            padding-right: 20px !important;
+            text-align: left !important;
+            }
+        }
+    }
+    .content-box-2{
+
+        .text-righ{
+            @include media-breakpoint-down (sm) {
+                h4{
+                    margin-left: -60px !important;
+                }
+                p{
+                    text-align: left !important;
+                    padding-left: 10px;
+                }
+            }
+        }
+        @include media-breakpoint-down (sm) {
+            margin-top: 50px !important;
+        }
+        .img-right{
+            @include media-breakpoint-down (sm) {
+                img{
+                    margin-top: 30px !important;
+                }
+            }
+          }
+        display: flex;
+        @include media-breakpoint-down (sm) {
+            flex-direction: row-reverse;
+        justify-content: space-between !important;
+            h4{
+                margin-top: 20px;
+                font-size: 20px;
+            }
+          
+            p{
+                margin-right: 25px !important;
+                margin-left: -60px !important;
+                font-size: 13px !important;
+            }
+        }
+        p{
+            color: rgba($color: #000000, $alpha: .6);
+            font-size: 15px;
+            padding: 0 90px 0 0px;
+            text-align: center !important;
+            line-height: 20px;
+            letter-spacing: 1px;
+            font-weight: 350;
+            margin-left: 40px;
+            text-align: left !important;
+        }
+        h4{
+            margin-right: 50px !important;
+        }
+    }
+    .content-box-3{
+        .text-righ{
+            @include media-breakpoint-down (sm) {
+                p{
+                    text-align: left !important;
+                    padding-left: 30px !important;
+                }
+            }
+        }
+        @include media-breakpoint-down (sm) {
+            margin-top: 50px !important;
+           
+        }
+      .img-right{
+        @include media-breakpoint-down (sm) {
+            img{
+                margin-top: 50px !important;
+            }
+        }
+      }
+        display: flex;
+        @include media-breakpoint-down (sm) {
+            flex-direction: row;
+        justify-content: space-between !important;
+            h4{
+                margin-top: 20px;
+                font-size: 20px;
+            }
+          
+            p{
+                margin-right: -5px !important;
+                margin-left: -60px !important;
+                font-size: 13px !important;
+            }
+        }
+        p{
+            color: rgba($color: #000000, $alpha: .6);
+            font-size: 15px;
+            padding: 0 60px 0 0px;
+            text-align: center !important;
+            line-height: 20px;
+            letter-spacing: 1px;
+            font-weight: 350;
+            margin-left: 20px;
+            text-align: left !important;
+        }
+    }
+    .content-box-4{
+        .text-righ{
+            @include media-breakpoint-down (sm) {
+                h4{
+                    margin-left: -50px !important;
+                }
+                p{
+                    text-align: left !important;
+                    padding-left: 10px;
+                }
+            }
+        }
+        @include media-breakpoint-down (sm) {
+            margin-top: 50px !important;
+        }
+        .img-right{
+            @include media-breakpoint-down (sm) {
+                img{
+                    // margin-top: 50px !important;
+                }
+            }
+          }
+        
+        display: flex;
+        @include media-breakpoint-down (sm) {
+            flex-direction: row-reverse;
+        justify-content: space-between !important;
+            h4{
+                margin-top: -50px;
+                font-size: 20px;
+            }
+          
+            p{
+                margin-right: -5px !important;
+                margin-left: -60px !important;
+                font-size: 13px !important;
+            }
+        }
+        p{
+            color: rgba($color: #000000, $alpha: .6);
+            font-size: 15px;
+            padding: 0 70px 0 0px;
+            text-align: center !important;
+            line-height: 21px;
+            letter-spacing: 1px;
+            font-weight: 350;
+            margin-left: 15px;
+            text-align: left !important;
+        }
+    }
+    .content-box-5{
+        .text-righ{
+            @include media-breakpoint-down (sm) {
+                p{
+                    text-align: left !important;
+                    padding-left: 30px !important;
+                }
+            }
+        }
+        @include media-breakpoint-down (sm) {
+            margin-top: 50px;
+            
+        }
+        .img-right{
+            @include media-breakpoint-down (sm) {
+                img{
+                    margin-top: 30px !important;
+                }
+            }
+          }
+        
+        display: flex;
+        @include media-breakpoint-down (sm) {
+            flex-direction: row;
+        justify-content: space-between !important;
+            h4{
+                // margin-top: -50px;
+                margin: 0;
+                font-size: 18px;
+            }
+          
+            p{
+                margin-right: -5px !important;
+                margin-left: -60px !important;
+                font-size: 13px !important;
+            }
+        }
+        p{
+            color: rgba($color: #000000, $alpha: .6);
+            font-size: 15px;
+            padding: 0 60px 0 0px;
+            text-align: center !important;
+            line-height: 20px;
+            letter-spacing: 1px;
+            font-weight: 350;
+            text-align: left !important;
+        }
+    }
+    .content-box-6{
+        .text-righ{
+            @include media-breakpoint-down (sm) {
+                p{
+                    text-align: left !important;
+                    padding-left: 30px !important;
+                }
+            }
+        }
+        @include media-breakpoint-down (sm) {
+            margin-top: 50px !important;
+            
+            p{
+                text-align: left !important;
+                padding-left: 10px !important;
+            }
+            
+        }
+        .img-right{
+            @include media-breakpoint-down (sm) {
+                img{
+                    margin-top: -40px !important;
+                }
+            }
+          }
+        display: flex;
+        @include media-breakpoint-down (sm) {
+            flex-direction: row-reverse;
+        justify-content: space-between !important;
+            h4{
+                margin-top: -50px;
+                font-size: 20px;
+            }
+          
+            p{
+                margin-right: -5px !important;
+                margin-left: -60px !important;
+                font-size: 13px !important;
+            }
+        }
+        p{
+            color: rgba($color: #000000, $alpha: .6);
+            font-size: 15px;
+            padding: 0 70px 0 0px;
+            text-align: center !important;
+            line-height: 20px;
+            letter-spacing: 1px;
+            font-weight: 350;
+            text-align: left !important;
+            margin-left: 10px;
+         
+        }
+    }
+    
+}

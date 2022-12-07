@@ -1,0 +1,55 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+#about{
+    @include media-breakpoint-down (sm) {
+        position: relative; 
+        top: 400px !important;
+      
+    }
+    h2{
+        @include media-breakpoint-down (sm) {
+            font-size: 32px !important;
+        }
+        font-size: 50px !important;
+    }
+    .img-pad{
+        @include media-breakpoint-down (sm) {
+            padding: 30px;
+        }
+    }
+    .img-about1{
+        @include media-breakpoint-down (sm) {
+            position: relative;
+            left: 180px;
+            top: -80px;
+            z-index: -1;
+        }
+        position: relative;
+        left: -60px;
+        top: 150px;
+        z-index: -1;
+    }
+    .img-about2{
+        @include media-breakpoint-down (sm) {
+            top: -245px !important;
+            position: relative;
+            left: -170px !important;
+        }
+        position: relative;
+        top: -160px;
+        left: -620px;
+        z-index: -1;
+    }
+    .about-text{
+        @include media-breakpoint-down (sm) {
+            margin-left: 0 !important;
+            text-align: center;
+            padding: 0 2px 0 2px;
+        }
+        padding:  0 48px 0 48px;
+        text-align: left;
+        margin-left: -200px;
+        
+    }
+}
